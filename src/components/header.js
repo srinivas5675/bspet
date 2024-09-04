@@ -6,6 +6,9 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import { Link } from "@mui/material";
+
+
 
 export default function Header() {
 	return (
@@ -18,9 +21,9 @@ export default function Header() {
 				>
 					BSPet
 				</Typography>
-				<Button color="inherit">Buffalos</Button>
-				<Button color="inherit">Hens</Button>
-				<Button color="inherit">Dogs</Button>
+				<Button color="inherit" href="/buffalos">Buffalos</Button>
+				<Button color="inherit" href="/hens">Hens</Button>
+				<Button color="inherit" href="/dogs">Dogs</Button>
 			</Toolbar>
 		</AppBar>
 	);
