@@ -2,14 +2,10 @@
 
 import React from "react";
 import "./App.css";
-import DataEntryForm from "./components/Tabledatacoll";
-import DataFetchingComponent from "./components/Servicecall";
+import Header from "./header";
 function App() {
     return (
-        <div>
-          <DataEntryForm/>
-<DataFetchingComponent/>
-        </div>
+        <Header/>
     );
 }
 
