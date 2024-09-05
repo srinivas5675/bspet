@@ -6,15 +6,16 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import BuffaloImage from "../assets/images/buffalo.jpg";
 
 export default function buffalos() {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, margin:"12px"}}>
       <CardMedia
         component="img"
         alt="green iguana"
-        height="140"
-        image="https://d1jyxxz9imt9yb.cloudfront.net/animal/848/meta_image/regular/LC202306_AmboseliWildlife_055_429144-reduced.jpg"
+        height="100%"
+        image={BuffaloImage}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
