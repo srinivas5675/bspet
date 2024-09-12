@@ -7,40 +7,36 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import BuffaloImage from '../assets/images/buffalo.jpg';
 
-const BuffaloCard = () => (
-  <Card sx={{ maxWidth: 345, margin: '12px' }}>
-    <CardMedia
-      component="img"
-      alt="buffalo"
-      height="140"
-      image={BuffaloImage}
-    />
-    <CardContent>
-      <Typography gutterBottom variant="h5" component="div">
-        Buffalos
-      </Typography>
-      <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-        Buffalos are large, herbivorous mammals known for their strength and
-        resilience, often found in grasslands and savannas.
-      </Typography>
-    </CardContent>
-    <CardActions>
-      <Button size="small">Share</Button>
-      <Button size="small">Learn More</Button>
-    </CardActions>
-  </Card>
-);
-
-export default function BuffaloCards() {
-  const cards = [];
-
-  for (let i = 0; i < 12; i++) {
-    cards.push(<BuffaloCard key={i} />);
-  }
-
+export default function buffalos() {
+  const buffalosData = [{name:'murra jathi geedha',age:'4years', price:'90,000', customerName:'Vusu', customerPhone:'3423433233', address:'eluru'},
+  {name:'natu buffalo',age:'3years', price:'70,000', customerName:'naga', customerPhone:'3423433233', address:'eluru'}];
+  
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
-      {cards}
+    <div style={{display: 'flex'}}>
+      {buffalosData.map((item) => (
+      <Card sx={{ maxWidth: 330, margin:"12px"}}>
+        <CardMedia
+          component="img"
+          alt="green iguana"
+          height="auto"
+          image={BuffaloImage}
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            {item.name}
+          </Typography>
+          <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+          Age: {item.age}
+          </Typography>
+          <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+          Price: {item.price}
+          </Typography>
+          <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+          Address: {item.address}
+          </Typography>
+        </CardContent>
+      </Card>
+      ))}
     </div>
   );
 }
